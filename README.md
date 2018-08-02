@@ -5,7 +5,7 @@ A dotnet template to scaffold [Elmish subcomponents](https://elmish.github.io/el
 ## Install
 
 
-[![NuGet](https://img.shields.io/nuget/v/Nuget.Core.svg?style=flat-square)](https://www.nuget.org/packages/Elmish.Component/0.1.0)
+[![NuGet](https://img.shields.io/nuget/vpre/Nuget.Core.svg?style=flat-square)](https://www.nuget.org/packages/Elmish.Component/0.1.0)
 
 >dotnet new --install Elmish.Component
 
