@@ -4,7 +4,7 @@ A dotnet template to scaffold [Elmish subcomponents](https://elmish.github.io/el
 
 ## Install
 
->dotnet new --install elmish-component
+>dotnet new --install Elmish.Component
 
 ## Usage
 
