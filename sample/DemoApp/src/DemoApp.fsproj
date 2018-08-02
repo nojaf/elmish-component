@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup>
+  <TargetFramework>netstandard2.0</TargetFramework>
+</PropertyGroup>
+<ItemGroup>
+  <Compile Include="Sunshine\Types.fs" />
+  <Compile Include="Sunshine\State.fs" />
+  <Compile Include="Sunshine\View.fs" />
+  <Compile Include="App.fs" />
+</ItemGroup>
+<Import Project="..\.paket\Paket.Restore.targets" />
+</Project>

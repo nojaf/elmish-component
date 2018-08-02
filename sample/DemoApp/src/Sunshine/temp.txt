@@ -1,0 +1,28 @@
+// Types.fs
+
+| SunshineMsg of App.Sunshine.Types.Msg
+
+// State.fs
+
+/// init
+let initSunshine, SunshineCmd = App.Sunshine.State.init ()
+
+TheSun = initSunshine
+...
+Cmd.map SunshineMsg SunshineCmd
+
+/// update
+
+| SunshineMsg msg ->
+    let m,c = App.Sunshine.State.update msg model.TheSun
+    { model with TheSun = m}, Cmd.map SunshineMsg c
+
+// View.fs
+
+App.Sunshine.View.view model.TheSun (SunshineMsg >> dispatch)
+
+// fsproj
+
+    <Compile Include="Sunshine\Types.fs" />
+    <Compile Include="Sunshine\State.fs" />
+    <Compile Include="Sunshine\View.fs" />

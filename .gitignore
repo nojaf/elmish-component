@@ -1,0 +1,4 @@
+*.ps1
+*.nupkg
+.idea/
+.vscode/

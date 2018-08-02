@@ -1,0 +1,28 @@
+// Types.fs
+
+| ElmishComponentMsg of ProjectNamespace.ElmishComponent.Types.Msg
+
+// State.fs
+
+/// init
+let initElmishComponent, ElmishComponentCmd = ProjectNamespace.ElmishComponent.State.init ()
+
+Property = initElmishComponent
+...
+Cmd.map ElmishComponentMsg ElmishComponentCmd
+
+/// update
+
+| ElmishComponentMsg msg ->
+    let m,c = ProjectNamespace.ElmishComponent.State.update msg model.Property
+    { model with Property = m}, Cmd.map ElmishComponentMsg c
+
+// View.fs
+
+ProjectNamespace.ElmishComponent.View.view model.Property (ElmishComponentMsg >> dispatch)
+
+// fsproj
+
+    <Compile Include="ElmishComponent\Types.fs" />
+    <Compile Include="ElmishComponent\State.fs" />
+    <Compile Include="ElmishComponent\View.fs" />
