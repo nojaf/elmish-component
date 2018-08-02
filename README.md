@@ -96,4 +96,4 @@ Cmd.map SunshineMsg SunshineCmd
     <Compile Include="Sunshine\View.fs" />
 ```
 
-See `sample`.
+See [sample](https://github.com/nojaf/elmish-component/tree/master/sample/DemoApp/src).
